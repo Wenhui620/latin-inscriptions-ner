@@ -1,0 +1,30 @@
+# Core
+python>=3.8
+numpy>=1.21
+pandas>=1.3
+
+# Deep Learning
+torch>=1.12
+torchvision>=0.13
+
+# NLP
+transformers>=4.30
+datasets>=2.10
+tokenizers>=0.13
+
+# spaCy (for preprocessing / training)
+spacy>=3.5
+spacy-transformers>=1.2
+
+# Latin NLP
+latincy>=0.3.0
+
+# Machine Learning
+scikit-learn>=1.2
+
+# Utilities
+tqdm>=4.65
+matplotlib>=3.5
+
+# Optional (evaluation / experiments)
+seqeval>=1.2.2
