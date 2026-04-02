@@ -8,7 +8,7 @@ The goal is to assign BIO tags (e.g., person names, titles, locations) to each t
 The project explores multiple approaches, including:
 - Traditional machine learning (SVM)
 - Neural models (with and without dependency features)
-- Transformer-based models (LatinBERT)
+- Transformer-based models (BERT)
 - Large language models (LLMs)
 
 ---
@@ -21,9 +21,9 @@ The project explores multiple approaches, including:
 - data_for_training: train / validation / test datasets in csv, jsonl, and spacy formats  
 
 ### training/model/
-- latinBERT: transformer-based model  
+- BERT: Multilingual BERT model  
 - llm: LLM-based tagging  
-- spacy: spaCy training pipeline  
+- spacy+latinroBERTa: spaCy training pipeline with Latin RoBERTa
 - svm: traditional machine learning model  
 - with_dependency_tree: neural model with dependency features  
 - without_dependency_tree: neural model without dependency features  
@@ -44,17 +44,17 @@ This project adopts an extended BIO tagging scheme tailored for Latin epigraphy,
 - **Annotate only the core entity span**:
   - Exclude punctuation (commas, brackets, quotation marks) unless part of abbreviations.
   - Exclude determiners and modifiers not intrinsic to the entity.
-- **Do not include surrounding descriptive phrases**:
-  - e.g., “the emperor Augustus” → only *Augustus* is annotated.
 - **Split coordinated entities**:
   - e.g., “Roma et Athenae” → two separate LOC entities.
-- **Hyphenated or compound mentions**:
-  - Annotate each entity separately if they refer to distinct places or persons.
 - **Nested structure (important for Roman names)**:
   - Full name = outer span
   - Internal components (PRAE, NOMEN, etc.) = sub-spans
 - **Consistency rule**:
   - The same entity type should be annotated consistently across the dataset.
+- **Location entities (LOC) should refer only to place names (toponyms)**:
+  - Do not annotate demonyms or people derived from locations.
+  - e.g., *Athenienses* (“Athenians”) should NOT be labeled as LOC.
+  - Only annotate the geographical noun itself (e.g., *Athenae*).
 
 ---
 
@@ -100,18 +100,7 @@ This project adopts an extended BIO tagging scheme tailored for Latin epigraphy,
 
 ---
 
-### 5. Relation Annotation (if applicable)
-
-To link components to a full name:
-
-1. Annotate component (e.g., PRAE)  
-2. Annotate full name (PERS)  
-3. Link using `belongs_to` relation  
-4. Repeat for NOMEN, COG, AG, FILI, TITLE  
-
----
-
-### 6. Special Rules for Roman Names
+### 5. Special Rules for Roman Names
 
 - Use **B-PERS only when**:
   - The name is standalone  
@@ -123,7 +112,7 @@ To link components to a full name:
 
 ---
 
-### 7. Special Notes
+### 6. Special Notes
 
 - TITLE must correspond to historically valid Roman titles.
 - FILI includes:
