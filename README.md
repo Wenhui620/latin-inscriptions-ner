@@ -1,9 +1,11 @@
-# Latin Inscription NER
-
-**Wenhui Cui, Phillip Benjamin Ströbel**
+# Across Generations: A Comparative Analysis of NER for Latin Inscriptions from Classical Machine Learning to LLMs
+**Wenhui Cui, Phillip Benjamin Ströbel**  
 University of Zurich  
+wenhui.cui@uzh.ch, phillip.stroebel@uzh.ch  
 
-🚀 Accepted at LT4HALA Workshop 2026.
+In *Proceedings of the LT4HALA Workshop*, LREC-COLING 2026. (Accepted)
+
+---
 
 ---
 
@@ -423,10 +425,17 @@ Then run training or evaluation scripts from the corresponding model folders und
 
 ---
 
-## 📖 How to Cite
+## How to Cite
 
-If you use this work, please cite:
+If you use this work, please cite the following paper (accepted to the LT4HALA Workshop, LREC-COLING 2026):
 
-Cui, W., Ströbel, P. B. (2026).
-*Latin Inscription NER*.  
-Proceedings of the LT4HALA Workshop.
+
+**BibTeX:**
+```bibtex
+@inproceedings{CuiStrobel2026LT4HALA,
+  author    = {Cui, W. and Str{\"o}bel, P. B.},
+  title     = {Across Generations: A Comparative Analysis of NER for Latin Inscriptions from Classical Machine Learning to LLMs},
+  booktitle = {Proceedings of the LT4HALA Workshop, LREC-COLING 2026},
+  year      = {2026},
+  note      = {Accepted}
+}
