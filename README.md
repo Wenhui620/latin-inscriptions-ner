@@ -1,6 +1,8 @@
 # Across Generations: A Comparative Analysis of NER for Latin Inscriptions from Classical Machine Learning to LLMs
 **Wenhui Cui, Phillip Benjamin Ströbel**  
+
 University of Zurich  
+
 wenhui.cui@uzh.ch, phillip.stroebel@uzh.ch  
 
 In *Proceedings of the LT4HALA Workshop*, LREC-COLING 2026. (Accepted)
