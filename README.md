@@ -1,5 +1,12 @@
 # Latin Inscription NER
 
+**Wenhui Cui, Phillip Benjamin Ströbel**
+University of Zurich  
+
+🚀 Accepted at LT4HALA Workshop 2026.
+
+---
+
 ## Overview
 
 This project focuses on Named Entity Recognition (NER) for Latin inscriptions.  
@@ -413,3 +420,13 @@ Install dependencies:
 pip install -r requirement.txt
 
 Then run training or evaluation scripts from the corresponding model folders under training/model/.
+
+---
+
+## 📖 How to Cite
+
+If you use this work, please cite:
+
+Cui, W., Ströbel, P. B. (2026).
+*Latin Inscription NER*.  
+Proceedings of the LT4HALA Workshop.
